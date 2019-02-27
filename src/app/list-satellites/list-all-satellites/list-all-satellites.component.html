@@ -1,3 +1,17 @@
-<p>
-  list-all-satellites works!
-</p>
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success" (click)="onRefresh()">Refresh</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <app-satellite-item
+      *ngFor="let satelliteEl of satellites; let i = index"
+      [satellite]="satelliteEl"
+      [index]="i"></app-satellite-item>
+  </div>
+</div>
+
+
+

@@ -7,7 +7,7 @@ import { Satellite } from './list-satellites.model';
 
 @Injectable()
 export class  SatelliteService {  //RecipeService
-  recipesChanged = new Subject<Satellite[]>();
+  satellitesChanged = new Subject<Satellite[]>();
 
   private satellites: Satellite[] = [
     new Satellite(
@@ -26,16 +26,16 @@ export class  SatelliteService {  //RecipeService
 
 //   constructor(private slService: ShoppingListService) {}
 
-  setRecipes(satellites: Satellite[]) {
+  setSatellites(satellites: Satellite[]) {
     this.satellites = satellites;
-    //this.recipesChanged.next(this.recipes.slice());
+    this.satellitesChanged.next(this.satellites.slice());
   }
 
-  getRecipes() {
+  getSatellites() {
     return this.satellites.slice();
   }
 
-  getRecipe(index: number) {
+  getGetSatellite(index: number) {
     return this.satellites[index];
   }
 
