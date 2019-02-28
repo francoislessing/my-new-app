@@ -6,12 +6,12 @@ import { Satellite } from './list-satellites.model';
 // import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
 @Injectable()
-export class  SatelliteService {  //RecipeService
+export class  SatelliteService {  
   satellitesChanged = new Subject<Satellite[]>();
 
   private satellites: Satellite[] = [
     new Satellite(
-      'Tasty Schnitzel Satellite',
+      'Tasty Schnitzel Satellite Service',
       'A super-tasty constellation',
       'Healthy',
       '12 12 12',
@@ -53,7 +53,7 @@ export class  SatelliteService {  //RecipeService
 //     this.recipesChanged.next(this.recipes.slice());
 //   }
 
-  deleteRecipe(index: number) {
+  deleteSatellites(index: number) {
     this.satellites.splice(index, 1);
     //this.recipesChanged.next(this.recipes.slice());
   }

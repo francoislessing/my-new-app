@@ -26,7 +26,7 @@ import { SatelliteService } from '../list-satellites/list-satellites.service';
   providers: [
     ShoppingListService,
     RecipeService,
-    // SatelliteService,
+    SatelliteService,
     DataStorageService,
     AuthService
   ]
