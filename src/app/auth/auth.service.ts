@@ -8,7 +8,9 @@ import * as EmailValidator from 'email-validator';
 export class AuthService {
   token: string;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.token=this.makeId(10);
+  }
 
   private makeId(charCount: number) {
     var text = "";
