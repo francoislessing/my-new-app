@@ -8,6 +8,7 @@ import { AuthService } from '../auth/auth.service';
 import { DataStorageService } from '../shared/data-storage.service';
 import { RecipeService } from '../recipes/recipe.service';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
+import { SatelliteService } from '../list-satellites/list-satellites.service';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
   providers: [
     ShoppingListService,
     RecipeService,
+    // SatelliteService,
     DataStorageService,
     AuthService
   ]
