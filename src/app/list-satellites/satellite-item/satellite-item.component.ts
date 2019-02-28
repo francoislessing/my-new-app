@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Recipe } from '../list-satellites.model';
+import { Satellite } from '../list-satellites.model';
 
 @Component({
   selector: 'app-satellite-item',
@@ -8,13 +8,14 @@ import { Recipe } from '../list-satellites.model';
   styleUrls: ['./satellite-item.component.css']
 })
 export class SatelliteItemComponent implements OnInit {
-
-//  constructor() { }
-  @Input() recipe: Recipe;
+  @Input() satellite: Satellite;
   @Input() index: number;
 
   ngOnInit() {
 
   }
+
+
+//  constructor() { }
 
 }
