@@ -15,28 +15,44 @@ export class ListAllSatellitesComponent implements OnInit,OnDestroy {
   satellites : Satellite[];
   subscription : Subscription;
 
-  constructor(private satelliteService: SatelliteService,
+  constructor(//private satelliteService: SatelliteService,
               private router: Router,
               private route: ActivatedRoute) { 
 
               }
 
   ngOnInit() {
-    this.subscription = this.satelliteService.satellitesChanged
-    .subscribe(
-      (satellites: Satellite[]) => {
-        this.satellites = satellites
-      }
-    );
-  this.satellites = this.satelliteService.getSatellites();
+    // this.subscription = this.satelliteService.satellitesChanged
+    // .subscribe(
+    //   (satellites: Satellite[]) => {
+    //     this.satellites = satellites
+    //   }
+    // );
+  //this.satellites = this.satelliteService.getSatellites();
+
+  this.satellites = [
+    new Satellite(
+      'Tasty Schnitzel Satellite',
+      'A super-tasty constellation',
+      'Healthy',
+      '12 12 12',
+      '13 13 13'),
+
+    new Satellite('Big Fat Burger Satellite',
+    'A super-tasty constellation',
+    'Healthy',
+    '120 120 120',
+    '130 130 130')
+  ];
+
   }    
   
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    // this.subscription.unsubscribe();
   }
 
   onRefresh() {
-    this.router.navigate(['new'], {relativeTo: this.route});
+    // this.router.navigate(['new'], {relativeTo: this.route});
   }
 
 }
