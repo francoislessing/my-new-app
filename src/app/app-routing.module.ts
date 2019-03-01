@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 // import { ListSatellitesComponent } from './list-satellites/list-satellites.component'; // static module import
 import { HomeComponent } from './core/home/home.component';
+import { AuthGuard } from './auth/auth-guard.service';
 
 
 const appRoutes: Routes = [
