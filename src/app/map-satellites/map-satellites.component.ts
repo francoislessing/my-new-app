@@ -37,6 +37,12 @@ export class MapSatellitesComponent implements OnInit {
   public location:Location = {
     lat: 51.678418,
     lng: 7.809007,
+    viewport: {
+      east: 12,
+    north: 23,
+    south: 43,
+    west: 21
+    },
     marker: {
       lat: 51.678418,
       lng: 7.809007,
