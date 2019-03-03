@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs/Subscription';
 
 import { Satellite } from '../list-satellites.model';
 import { SatelliteService } from '../list-satellites.service';
+import { DataStorageService } from 'src/app/shared/data-storage.service';
 
 @Component({
   selector: 'app-list-all-satellites',
@@ -15,7 +16,8 @@ export class ListAllSatellitesComponent implements OnInit,OnDestroy {
   satellites : Satellite[];
   subscription : Subscription;
 
-  constructor(private satelliteService: SatelliteService,
+  constructor(private dataStorageService: DataStorageService,
+              private satelliteService: SatelliteService,
               private router: Router,
               private route: ActivatedRoute) { 
 
@@ -53,6 +55,7 @@ export class ListAllSatellitesComponent implements OnInit,OnDestroy {
 
   onRefresh() {
     // this.router.navigate(['new'], {relativeTo: this.route});
+    this.dataStorageService.getSatellites();
   }
 
 }
