@@ -4,9 +4,10 @@
   routerLinkActive="active"
   class="list-group-item clearfix">
   <div class="pull-left">
-    <h4 class="list-group-item-heading">{{ satellite.displayName }}</h4>
-    <p class="list-group-item-text">{{ satellite.constellation }}</p>
-    <p class="list-group-item-text">{{ satellite.longtitude }}  ,  {{ satellite.lattitude }}  </p>
+    <h4 class="list-group-item-heading">Name : {{ satellite.displayName }}</h4>
+    <p class="list-group-item-text">Constellation : {{ satellite.constellation }}</p>
+    <p class="list-group-item-text">{{ satellite.lattitude }}  ,  {{ satellite.longtitude }}  </p>
+    <p class="list-group-item-text" ><font [color]="satellite.healthIndicator?'green':'red'">Health</font> </p>
     
   </div>
   <!-- <span class="pull-right">
