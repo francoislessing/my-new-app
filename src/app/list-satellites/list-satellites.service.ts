@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 
-import { Satellite } from './list-satellites.model';
+import { Satellite, SatelliteReceived } from './list-satellites.model';
 //import { Ingredient } from '../shared/ingredient.model';
 // import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
@@ -13,21 +13,31 @@ export class  SatelliteService {
     new Satellite(
       'Tasty Schnitzel Satellite Service',
       'A super-tasty constellation',
-      'Healthy',
-      '12 12 12',
-      '13 13 13'),
+      true,
+      120.0,
+      130.0),
 
     new Satellite('Big Fat Burger Satellite',
     'A super-tasty constellation',
-    'Healthy',
-    '120 120 120',
-    '130 130 130')
+    true,
+    120.0,
+    130.0)
   ];
 
 //   constructor(private slService: ShoppingListService) {}
 
-  setSatellites(satellites: Satellite[]) {
-    this.satellites = satellites;
+  setSatellites(satellites: SatelliteReceived[]) {
+    // Transform satellitesReceived[] into Satellite[]
+    let satellitesTransformed : Satellite[] = [];
+    for(const satItem of satellites) {
+      satellitesTransformed.push(new Satellite(satItem.displayName,
+      satItem.constellation,
+      satItem.orbit.isHealthy,
+      satItem.path[0].trace.latitude,
+      satItem.path[0].trace.longitude))
+    }
+    // Set 
+    this.satellites = satellitesTransformed;
     this.satellitesChanged.next(this.satellites.slice());
   }
 
