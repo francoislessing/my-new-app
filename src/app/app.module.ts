@@ -5,11 +5,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
-import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { AuthModule } from './auth/auth.module'
 import { CoreModule } from './core/core.module';
-import { ListSatellitesModule } from './list-satellites/list-satellites.module';
-import { MapSatellitesComponent } from './map-satellites/map-satellites.component';
 
 @NgModule({
   declarations: [
