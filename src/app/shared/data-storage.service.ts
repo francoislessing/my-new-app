@@ -46,7 +46,7 @@ export class DataStorageService {
 
   getSatellites() {
     
-
+ 
     this.http.get('https://gnssplanningbeta.azurewebsites.net/api/SatelliteLocations/') 
       .map(
         (response: Response) => {

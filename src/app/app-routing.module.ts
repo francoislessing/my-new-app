@@ -10,11 +10,7 @@ import { AuthGuard } from './auth/auth-guard.service';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'list-satellites', loadChildren : './list-satellites/list-satellites.module#ListSatellitesModule'},
-  { path: 'map-satellites', loadChildren : './map-satellites/map-satellites.module#MapSatellitesModule'},
-
-  { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule'},
-  { path: 'shopping-list', component: ShoppingListComponent }
-  // ,{ path: 'list-satellites', component: ListSatellitesComponent }
+  { path: 'map-satellites', loadChildren : './map-satellites/map-satellites.module#MapSatellitesModule'}
 ];
 
 @NgModule({

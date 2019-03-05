@@ -20,8 +20,6 @@ import { MapSatellitesComponent } from './map-satellites/map-satellites.componen
     HttpModule,
     AppRoutingModule,
     SharedModule,
-    ShoppingListModule,
-    // ListSatellitesModule, // static module import
     AuthModule,
     CoreModule
   ],
