@@ -7,6 +7,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { AuthService } from '../auth/auth.service';
 import { DataStorageService } from '../shared/data-storage.service';
 import { SatelliteService } from '../list-satellites/list-satellites.service';
+import { AuthGuard } from '../auth/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SatelliteService } from '../list-satellites/list-satellites.service';
   providers: [
     SatelliteService,
     DataStorageService,
+    AuthGuard,
     AuthService
   ]
 })

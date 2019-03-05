@@ -7,8 +7,8 @@ import { AuthGuard } from './auth/auth-guard.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'list-satellites', loadChildren : './list-satellites/list-satellites.module#ListSatellitesModule'},
-  { path: 'map-satellites', loadChildren : './map-satellites/map-satellites.module#MapSatellitesModule'}
+  { path: 'list-satellites', loadChildren : './list-satellites/list-satellites.module#ListSatellitesModule',canActivate:[AuthGuard]},
+  { path: 'map-satellites', loadChildren : './map-satellites/map-satellites.module#MapSatellitesModule',canActivate:[AuthGuard]}
 ];
 
 @NgModule({

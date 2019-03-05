@@ -9,7 +9,7 @@ export class AuthService {
   token: string;
 
   constructor(private router: Router) {
-    this.token=this.makeId(10);
+    this.token=null;
   }
 
   private makeId(charCount: number) {
@@ -58,6 +58,7 @@ export class AuthService {
       // If valid email, set token to non-null value
       if(emailValidationResult == true)  {
         this.token = this.makeId(10);
+        this.router.navigate(['/'])
       }
     }    
   }
