@@ -1,11 +1,23 @@
-<p>
+
+
+
+<div class="map"
+leaflet
+[leafletOptions]="options"
+[leafletLayersControl]="layersControl"
+(leafletMapReady)="onMapReady($event)"
+>
+</div>  
+
+
+<!-- <p>
   map-satellites works! again
-</p>
+</p> -->
 
  
-<agm-map [(latitude)]="location.lat" [(longitude)]="location.lng" [(zoom)]="location.zoom" [disableDefaultUI]="true" [zoomControl]="true" [(fitBounds)]='location.viewport'>
+<!-- <agm-map [(latitude)]="location.lat" [(longitude)]="location.lng" [(zoom)]="location.zoom" [disableDefaultUI]="true" [zoomControl]="true" [(fitBounds)]='location.viewport'>
   <agm-marker [(latitude)]="location.marker.lat" [(longitude)]="location.marker.lng" [markerDraggable]="location.marker.draggable" (dragEnd)='markerDragEnd($event)'></agm-marker>
-</agm-map>
+</agm-map> -->
 
 <!-- 
 <div class="container-fluid">
