@@ -9,7 +9,7 @@ export class AuthService {
   token: string;
 
   constructor(private router: Router) {
-    this.token=null;
+    this.token = this.makeId(10);//null;
   }
 
   private makeId(charCount: number) {
@@ -46,7 +46,7 @@ export class AuthService {
     //     error => console.log(error)
     //   );
 
-    // Set defualt result to 'password failed'
+    // Set defualt result to 'password succeed' / password failed'
     this.token = null;
 
     // Validate password
